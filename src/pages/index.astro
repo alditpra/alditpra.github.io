@@ -5,6 +5,8 @@ import Layout from '@layouts/Layout.astro';
 import PostCard from '@components/blog/PostCard.astro';
 import PopularTopics from '@components/blog/PopularTopics.astro';
 import { siteConfig } from '@config/site';
+import { Icon } from 'astro-icon/components';
+
 
 // Get all blog posts and sort by date (newest first)
 const posts = await getCollection('posts', ({ data }) => {
@@ -18,30 +20,6 @@ const sortedPosts = posts.sort((a, b) => {
 
 // Get the latest 6 posts for the homepage
 const latestPosts = sortedPosts.slice(0, 6);
----
-
-<Layout
-  title={siteConfig.title}
-  description={siteConfig.description}
-  wideContent={true}
->
-  <main class="w-full">
-    <!-- Hero Section -->
-    <Hero /> 
-        <!-- Browse Categories Section -->
-<section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-  <div class="text-center mb-12">
-    <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white mb-3">
-      Eksplorasi
-    </h2>
-    <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
-Temukan insight berdasarkan tema dan topik    </p></div>
-
-
-// Get all blog posts
-const posts = await getCollection('posts', ({ data }) => {
-  return !data.draft;
-});
 
 // Get all unique categories and count posts for each
 const categories = [...new Set(posts.flatMap(post => post.data.categories || []))];
@@ -56,10 +34,27 @@ const categoryCounts = categories.map(category => {
     slug: category.toLowerCase()
   };
 }).sort((a, b) => b.count - a.count); // Sort by post count (descending)
+
 ---
 
-  <div class="w-full py-8 ">
-    
+<Layout
+  title={siteConfig.title}
+  description={siteConfig.description}
+  wideContent={true}
+>
+  <main class="w-full">
+    <!-- Hero Section -->
+    <Hero /> 
+        <!-- Browse Categories Section -->
+<section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-20">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white mb-3">
+      Eksplorasi
+    </h2>
+    <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
+Temukan insight berdasarkan kategori    </p></div>
+
+
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {categoryCounts.map(({ name, count, slug }) => (
         <a 
@@ -85,39 +80,8 @@ const categoryCounts = categories.map(category => {
       </div>
     )}
   </div>
-
-
-
-
-
-
-
-
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <a 
-              href="/categories/" 
-              class="flex flex-col items-center p-6 bg-white dark:bg-[#111827] rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-700 text-center"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600 dark:text-blue-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-              </svg>
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Kategori</h3>
-              <p class="text-gray-600 dark:text-gray-400">Telusuri per tema</p>
-            </a>
-            
-            <a 
-              href="/tags/" 
-              class="flex flex-col items-center p-6 bg-white dark:bg-[#111827] rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-700 text-center"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600 dark:text-blue-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-              </svg>
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">#Hashtag</h3>
-              <p class="text-gray-600 dark:text-gray-400">Cari lewat topik</p>
-            </a>
-          </div>
-        </section>
+<br>
+</section>
 
 
 
