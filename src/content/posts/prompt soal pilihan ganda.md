@@ -8,8 +8,7 @@ authors: ["alditpra"]
 categories: ["Prompt"]
 tags: ["Generative Ai"]
 ---
-
-Jujur aja, sebagai dosen bisnis digital yang harus ngajar beberapa kelas sekaligus, bikin soal ujian itu kadang bikin pusing kepala. Apalagi kalau harus bikin soal yang berkualitas, bukan sekadar asal tanya. Nah, sejak kenal sama AI tools kayak ChatGPT atau Claude, hidup saya jadi jauh lebih efisien.
+Jujur aja, sebagai dosen yang harus ngajar beberapa kelas sekaligus, bikin soal ujian itu kadang bikin pusing kepala, terutama saat koreksi nilai. Apalagi kalau harus bikin soal yang berkualitas, bukan sekadar asal tanya. Nah, sejak kenal sama AI tools kayak ChatGPT atau Claude, hidup saya jadi jauh lebih efisien.
 
 Tapi masalahnya, kalau kita ngasih prompt sembarangan, hasilnya ya... sembarangan juga. Soal yang dihasilkan terlalu gampang, jawabannya keliatan banget, atau malah ngaco total. Makanya, saya mau berbagi koleksi prompt yang bener-bener work untuk bikin soal ujian yang berkualitas.
 
@@ -31,7 +30,7 @@ KARAKTERISTIK SOAL:
 - Distractor berkualitas - Semua opsi jawaban salah (distractor) harus logis, persuasif, dan menggunakan terminologi teknis yang akurat. Tidak boleh ada jawaban yang terlihat jelas salah bagi yang memahami konsep
 - Keseimbangan opsi - Panjang semua opsi jawaban harus relatif seimbang, dengan kedalaman dan spesifisitas yang setara
 - Konteks lengkap - Setiap soal harus menyediakan cukup informasi kontekstual untuk menjawab tanpa perlu merujuk ke materi eksternal
-     
+   
 FORMAT OUTPUT: 
 - Setiap soal harus memiliki nomor berurutan dengan format penomoran yang konsisten
 - Soal harus ditulis dalam paragraf lengkap dengan konteks yang jelas
@@ -42,7 +41,7 @@ TIPE SOAL YANG DIINGINKAN:
 - 40% soal pemahaman konsep (memahami definisi dalam konteks)
 - 40% soal aplikasi langsung (menggunakan rumus/konsep dalam situasi sederhana)
 - 20% soal analisis sederhana (membandingkan dua konsep)
-     
+   
 TINGKAT KESULITAN: 
 - Soal harus menantang dan memerlukan analisis mendalam
 - Hindari pertanyaan yang bisa dijawab dengan mudah melalui pencarian kata kunci di materi
