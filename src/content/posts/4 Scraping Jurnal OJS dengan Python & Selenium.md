@@ -11,8 +11,6 @@ tags: ["Python", "Selenium", "OJS", "Web Scraping", "Tutorial"]
 
 > **Disclaimer:** Skrip yang saya bahas di sini adalah hasil eksperimen pribadi untuk keperluan riset. Gunakan dengan bijak dan hormati kebijakan masing-masing situs jurnal. Scraping yang agresif bisa membebani server—jangan jadi "tamu" yang bikin masalah.
 
----
-
 Jadi suatu hari saya pingin cari dan kumpulin beberapa paper jurnal untuk dijadikan referensi. Cari web jurnal satu persatu, klik judul paper lalu download file PDFnya, hadeh. Terus saya mikir, **kok bisa ya di era 2025 masih cari manual kayak gini?** Kan harusnya bisa diotomatisasi. Dan akhirnya, setelah trial and error, saya berhasil bikin skrip Python yang bisa ngambil data artikel dari ratusan situs jurnal OJS (Open Journal Systems) secara otomatis.
 
 > Lebih milih ngoding daripada cari manual, soalnya siapa tau besok butuh cari paper lagi.
