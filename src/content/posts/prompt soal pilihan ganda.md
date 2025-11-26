@@ -1,5 +1,5 @@
 ---
-title: "Bikin Soal Ujian Online yang Efektif dengan AI: Kumpulan Prompt Siap Pakai"
+title: "Gua Bikin Soal Ujian Online yang Efektif dengan AI: Kumpulan Prompt Siap Pakai"
 meta_title: "Catatan prompt pribadi untuk buat soal pilihan ganda karena malas koreksi"
 description: "Catatan prompt pribadi untuk buat soal pilihan ganda karena malas koreksi"
 pubDate: 2025-11-15
